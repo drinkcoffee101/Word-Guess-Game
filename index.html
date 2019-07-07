@@ -5,21 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="assets/javascript/game.js"></script>
     <title>Poke-Guess</title>
 </head>
 <body>
-    
+    <audio id="myAudio" src="assets/music/PokeMusic.mp3" type="audio/mpeg"></audio>
+    <h1>Who's that Pokemon?!</h1>
+    <button onclick="playAudio()" type="button">Play Tune!</button>
+    <br>
+    <button onclick="pauseAudio()" type="button">Stop That Tune!</button>
     <div class="flex-container">
         <div id="div1">
-            
-            
         </div>
+        <div><h2 id="lostText">Press any letter Key to begin!!!</h2></div>
     </div>
     <h3 id="wins">Wins: 0</h3>
     <h3 id="loss">Losses: 0</h3>
     <h3 id="guesses-left">Guesses Left: </h3>
     <h3 id="current-guesses">Your guesses so far: </h3>
+
+    <script>
+        var x = document.getElementById("myAudio"); 
+
+function playAudio() { 
+  x.play(); 
+} 
+function pauseAudio() { 
+  x.pause(); 
+} 
+    </script>
 </body>
 </html>
